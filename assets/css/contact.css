@@ -1,0 +1,105 @@
+.contact-background {
+    background: #000000;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.contact-title {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.contact-title::before {
+    content: '/';
+    background: linear-gradient(#B629F8, #800ADD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1ch;
+    color: #800ADD;
+}
+
+.contact-description, .contact-info {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 32ch;
+    color: #CCCCCC;
+}
+
+.contact-description {
+    justify-self: start;
+}
+
+.contact-info {
+    justify-self: end;
+}
+
+.contact-info li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.info-brand {
+    font-weight: 700;
+}
+
+.info-email {
+    background: linear-gradient(#B629F8, #800ADD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #800ADD;
+}
+
+.contact-copyright {
+    grid-column: 1 / -1;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #8F8F8F;
+}
+
+@media (max-width: 992px) {
+    .contact-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .contact-info {
+        margin-top: 40px;
+        justify-self: start;
+    }
+    .contact-description, .contact-info {
+        max-width: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact {
+        padding-top: 40px;
+    }
+    .contact-title {
+        font-size: 1.75rem;
+    }
+    .contact-description, .contact-info {
+        font-size: 1.2rem;
+    }
+    .contact-copyright {
+        font-size: 0.875rem;
+    }
+}

@@ -1,0 +1,192 @@
+.education-background {
+    background: #141414;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.education-title {
+    text-align: right;
+    text-transform: lowercase;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.education-title::before {
+    content: '/';
+    background: linear-gradient(#B629F8, #800ADD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1ch;
+    color: #800ADD;
+}
+
+.education-description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 72ch;
+    margin-bottom: 20px;
+    color: #A3A3A3
+}
+
+.education-description strong {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.graduations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+    justify-content: space-around;
+}
+
+.graduation {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-height: 190px;
+    border-radius: 2px;
+    padding: 20px;
+    background: #000000;
+    color:#FFF;
+    position: relative;
+}
+
+.graduation::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../imgs/border_gradient.svg') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+}
+
+.graduation-type {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #A3A3A3;
+}
+
+.graduation-name {
+    flex: 1;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.graduation-school {
+    font-size: 1.125rem;
+    color: #A3A3A3;
+}
+
+.courses {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.course-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 480px;
+    position: relative;
+    margin-left: 36px;
+}
+
+.course-container h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #8F8F8F;
+}
+
+.course-container h4::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: -4px;
+    left: -36px;
+}
+
+.intensive-courses h4::before {
+    background: url('../imgs/icon_book.svg') no-repeat;
+}
+
+.language-courses h4::before {
+    background: url('../imgs/icon_translate.svg') no-repeat;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.course-name, .course-duration {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.1;
+    color: #FFFFFF;
+}
+
+.course-duration, .course-fluency {
+    color: #8F8F8F;
+}
+
+.course-fluency::before {
+    content: '/';
+    margin-right: 1ch;
+}
+
+@media (max-width: 992px) {
+    .education-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .graduations {
+        margin-bottom: 30px;
+    }
+    .courses {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .course-container {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .education {
+        padding-top: 40px;
+    }
+    .education-title {
+        font-size: 1.75rem;
+    }
+    .education-description {
+        font-size: 1.2rem;
+    }
+}

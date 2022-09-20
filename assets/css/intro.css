@@ -1,0 +1,83 @@
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+    align-items: center;
+    height: 95vh;
+}
+
+.intro h1 {
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.intro h1::after {
+    content: '.';
+    background: linear-gradient(#B629F8, #800ADD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #800ADD;
+}
+
+.intro h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.4;
+    max-width: 30ch;
+    color: #525252;
+}
+
+.intro-image {
+    position: relative;
+}
+
+.intro-image::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../imgs/border_gradient.svg') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+}
+
+@media (max-width: 992px) {
+    .intro h1 {
+        font-size: 4rem;
+    }
+    .intro h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding-top: 60px;
+        padding-bottom: 80px;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
+    .intro h1 {
+        font-size: 3rem;
+    }
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+    .intro-image {
+        display: none;
+    }
+}

@@ -1,0 +1,178 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.experience-title {
+    font-size: 3rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.experience-title::before {
+    content: '/';
+    background: linear-gradient(#B629F8, #800ADD);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1ch;
+    color: #800ADD;
+}
+
+.experience-description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 72ch;
+    margin-bottom: 40px;
+}
+
+.experience-description strong {
+    font-weight: 600;
+}
+
+.job {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 120px;
+    height: 100%;
+}
+
+.job h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.job-info {
+    text-align: right;
+    word-wrap: break-word;
+    width: 150px;
+    position: relative;
+}
+
+/* timeline outline circle */
+.job-info::after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 0;
+    right: -73.5px;
+    z-index: 1;
+    background-image: linear-gradient(#FFFFFF, #FFFFFF),
+    linear-gradient(#B629F8, #800ADD);
+    background-clip: padding-box, border-box;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.job-info span {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #525252;
+}
+
+/* timeline circle */
+.job:first-child .job-info::after {
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(#B629F8, #800ADD);
+    border: none;
+}
+
+.job-about {
+    max-width: 72ch;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+/* timeline straight */
+.job-about::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(#B629F8, #800ADD);
+    top: 0;
+    left: -60px;
+}
+
+.job:last-child .job-about::before {
+    height: 0;
+}
+
+.job-about p {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.job:last-child .job-about {
+    padding-bottom: 0;
+}
+
+@media (max-width: 992px) {
+    .experience-title {
+        font-size: 2.5rem;
+    }
+    .job-info h3, .job-about h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .experience {
+        padding-top: 40px;
+    }
+    .experience-title {
+        font-size: 1.75rem;
+    }
+    .experience-description {
+        font-size: 1.2rem;
+    }
+    .job {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 8px;
+        position: relative;
+    }
+    /* timeline straight */
+    .job::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(#B629F8, #800ADD);
+        top: 0;
+        right: -12px;
+    }
+    .job:last-child::after {
+        height: 0;
+    }
+    .job-info {
+        text-align: left;
+        width: auto;
+    }
+    .job-info::after {
+        right: -24px;
+    }
+    .job-info span {
+        font-size: 0.75rem;
+    }
+    .job-info h3, .job-about h3 {
+        font-size: 1.25rem;
+    }
+    .job-about::before {
+        display: none;
+    }
+    .job-about p {
+        font-size: 1rem;
+    }
+}
